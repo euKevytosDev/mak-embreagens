@@ -1,0 +1,44 @@
+/* ============================================
+   MAK Embreagens — Design System
+   ============================================ */
+
+:root {
+  /* Brand */
+  --orange: #f26a1b;
+  --orange-dark: #d4550f;
+  --orange-soft: #ff8a3d;
+  --blue: #1e5aa8;
+  --blue-deep: #163f78;
+
+  /* Neutrals */
+  --black: #0c0c0c;
+  --ink: #141414;
+  --charcoal: #1c1c1c;
+  --slate: #2a2a2a;
+  --muted: #9a9a9a;
+  --cream: #f3eee6;
+  --white: #ffffff;
+
+  /* Semantic */
+  --bg: var(--black);
+  --bg-elevated: var(--charcoal);
+  --text: var(--white);
+  --text-muted: var(--muted);
+  --accent: var(--orange);
+  --accent-2: var(--blue);
+
+  /* Type */
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Manrope", sans-serif;
+
+  /* Layout */
+  --container: 1180px;
+  --header-h: 84px;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.55s;
+}
