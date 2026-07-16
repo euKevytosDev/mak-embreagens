@@ -165,44 +165,24 @@ button {
 
 /* Logo */
 .logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  gap: 0.15rem;
-}
-
-.logo__mark {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.85rem;
-  letter-spacing: 0.08em;
-  color: var(--white);
+  line-height: 1;
 }
 
-.logo__lines {
+.logo__img {
+  height: 52px;
+  width: auto;
   display: block;
-  width: 14px;
-  height: 12px;
-  background:
-    linear-gradient(var(--accent), var(--accent)) 0 0 / 100% 2px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 0 5px / 100% 2px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 0 10px / 100% 2px no-repeat;
+  border-radius: 6px;
+  background: var(--white);
+  padding: 4px 8px;
+  object-fit: contain;
 }
 
-.logo__sub {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.28em;
-  color: var(--accent);
-  padding-left: 1.35rem;
-}
-
-.logo--footer .logo__mark {
-  font-size: 2.1rem;
+.logo--footer .logo__img {
+  height: 64px;
+  padding: 6px 10px;
 }
 
 /* Header */
