@@ -462,37 +462,30 @@ button {
 .diff-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.2fr 0.9fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.diff-card:nth-child(2) {
-  transform: translateY(-8px);
-}
-
-.diff-card:nth-child(2) .diff-card__media {
-  aspect-ratio: 4 / 3.35;
-}
-
-.diff-card:nth-child(2) .diff-card__top h3 {
-  font-size: 1.7rem;
+  gap: 1.75rem;
+  align-items: stretch;
 }
 
 .diff-card {
   background: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+/* topo com altura igual → linha e imagem começam no mesmo nível */
 .diff-card__top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.9rem;
-  margin-bottom: 1rem;
+  min-height: 5.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .diff-card__icon {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: var(--accent);
   color: #fff;
@@ -507,43 +500,54 @@ button {
 
 .diff-card__top h3 {
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: none;
   letter-spacing: 0.01em;
   color: #111;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   line-height: 1.15;
 }
 
 .diff-card__top p {
   color: #666;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .diff-card__line {
   border: none;
   border-top: 1px solid #ddd;
-  margin: 0 0 1.15rem;
+  margin: 0 0 1.1rem;
+  width: 100%;
 }
 
+/* imagens alinhadas no mesmo padrão (topo e proporção iguais) */
 .diff-card__media {
-  border-radius: 22px;
+  border-radius: 24px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
+  width: 100%;
   background: #e8e8e8;
+  margin-top: auto;
 }
 
 .diff-card__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform 0.55s var(--ease);
 }
 
 .diff-card:hover .diff-card__media img {
-  transform: scale(1.05);
+  transform: scale(1.04);
+}
+
+/* meio um pouco maior só na largura; alinhamento vertical igual */
+.diff-card:nth-child(2) .diff-card__top h3 {
+  font-size: 1.65rem;
 }
 
 .differentials__cta {
@@ -954,16 +958,8 @@ button {
     margin-inline: auto;
   }
 
-  .diff-card:nth-child(2) {
-    transform: none;
-  }
-
-  .diff-card:nth-child(2) .diff-card__media {
-    aspect-ratio: 4 / 3;
-  }
-
   .diff-card:nth-child(2) .diff-card__top h3 {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 
   .services__grid {
