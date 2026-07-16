@@ -161,15 +161,16 @@
   }
 
 
-  /* Hero slideshow — fade suave entre fotos */
-  const heroSlides = document.querySelectorAll("#heroSlides .hero__slide");
-  if (heroSlides.length > 1) {
-    let heroIndex = 0;
+  /* Hero slideshow — desktop (fachada) / mobile (peças) */
+  document.querySelectorAll("[data-hero-slides]").forEach((track) => {
+    const slides = track.querySelectorAll(".hero__slide");
+    if (slides.length < 2) return;
+    let index = 0;
     window.setInterval(() => {
-      heroSlides[heroIndex].classList.remove("is-active");
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add("is-active");
+      slides[index].classList.remove("is-active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("is-active");
     }, 7000);
-  }
+  });
 
 })();

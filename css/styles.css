@@ -296,6 +296,24 @@ button {
   z-index: 0;
 }
 
+.hero__slides--mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hero__slides--desktop {
+    display: none;
+  }
+
+  .hero__slides--mobile {
+    display: block;
+  }
+
+  .hero__slides--mobile .hero__slide {
+    object-position: center center;
+  }
+}
+
 .hero__slide {
   position: absolute;
   inset: 0;
