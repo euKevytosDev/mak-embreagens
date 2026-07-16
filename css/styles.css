@@ -48,7 +48,7 @@ button {
 }
 
 .container {
-  width: min(100% - 2.5rem, var(--container));
+  width: min(100% - (var(--container-pad) * 2), var(--container));
   margin-inline: auto;
 }
 
@@ -56,13 +56,13 @@ button {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: var(--inline-gap);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: var(--stack-gap);
 }
 
 .eyebrow--center {
@@ -94,7 +94,7 @@ button {
   line-height: 1.05;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: var(--stack-gap);
   color: var(--white);
 }
 
@@ -105,7 +105,7 @@ button {
 .section-lead {
   color: var(--text-muted);
   max-width: 52ch;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--section-inner-gap);
   font-size: 1.05rem;
 }
 
@@ -123,7 +123,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: var(--inline-gap);
   font-weight: 700;
   font-size: 0.95rem;
   padding: 0.95rem 1.55rem;
@@ -210,7 +210,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: var(--content-gap);
 }
 
 .nav {
@@ -271,7 +271,7 @@ button {
   min-height: 100dvh;
   display: flex;
   align-items: center;
-  padding: calc(var(--header-h) + 3rem) 0 4rem;
+  padding: calc(var(--header-h) + var(--space-xl)) 0 var(--space-2xl);
   overflow: hidden;
 }
 
@@ -332,8 +332,8 @@ button {
 }
 
 .hero__offer {
-  margin-bottom: 2rem;
-  padding: 1.25rem 0;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md) 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -374,12 +374,12 @@ button {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  gap: var(--inline-gap);
 }
 
 /* Brands */
 .brands {
-  padding: 5rem 0 4rem;
+  padding: var(--section-pad-y-sm) 0;
   background: var(--ink);
   border-block: 1px solid var(--line);
 }
@@ -389,8 +389,8 @@ button {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: 2.25rem;
+  gap: var(--inline-gap);
+  margin-top: var(--section-inner-gap);
 }
 
 .brands__viewport {
@@ -401,7 +401,7 @@ button {
 .brands__track {
   display: flex;
   align-items: center;
-  gap: 4.75rem;
+  gap: var(--brands-gap);
   will-change: transform;
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -476,7 +476,7 @@ button {
 
 /* Diferenciais — layout igual RS (3 colunas, imagens alinhadas) */
 .differentials {
-  padding: 5.5rem 0 5rem;
+  padding: var(--section-pad-y) 0;
   background: var(--bg);
 }
 
@@ -496,9 +496,9 @@ button {
 .diff-grid {
   display: grid;
   grid-template-columns: 1fr 1.18fr 1fr;
-  gap: 2rem;
+  gap: var(--diff-gap);
   align-items: start;
-  margin-top: 2.75rem;
+  margin-top: var(--section-inner-gap);
 }
 
 .diff-card {
@@ -510,7 +510,7 @@ button {
 .diff-card__head {
   display: flex;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: var(--inline-gap);
   min-height: 6.25rem;
 }
 
@@ -552,7 +552,7 @@ button {
 .diff-card__line {
   border: none;
   border-top: 1px solid var(--line);
-  margin: 1rem 0 1.15rem;
+  margin: var(--stack-gap) 0 var(--space-md);
 }
 
 .diff-card__media {
@@ -577,7 +577,7 @@ button {
 
 .diff-card__cta {
   align-self: center;
-  margin-top: 1.35rem;
+  margin-top: var(--space-md);
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -586,20 +586,20 @@ button {
 
 /* About */
 .about {
-  padding: 6rem 0;
+  padding: var(--section-pad-y) 0;
   background: linear-gradient(180deg, var(--ink) 0%, var(--bg) 100%);
 }
 
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: var(--space-2xl);
   align-items: center;
 }
 
 .about__copy p {
   color: var(--text-muted);
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--content-gap);
   font-size: 1.05rem;
 }
 
@@ -610,8 +610,8 @@ button {
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin-top: 2.5rem;
+  gap: var(--stack-gap);
+  margin-top: var(--section-inner-gap);
 }
 
 .stat {
@@ -677,7 +677,7 @@ button {
 
 /* Services */
 .services {
-  padding: 6rem 0;
+  padding: var(--section-pad-y) 0;
   background:
     radial-gradient(ellipse 50% 50% at 0% 100%, rgba(30, 90, 168, 0.12), transparent),
     var(--bg);
@@ -686,8 +686,8 @@ button {
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-top: 2.5rem;
+  gap: var(--stack-gap);
+  margin-top: var(--section-inner-gap);
 }
 
 .service {
@@ -736,22 +736,22 @@ button {
 
 /* Location */
 .location {
-  padding: 6rem 0;
+  padding: var(--section-pad-y) 0;
   background: var(--ink);
 }
 
 .location__grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  gap: 3rem;
+  gap: var(--space-xl);
   align-items: stretch;
 }
 
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 2rem;
+  gap: var(--stack-gap);
+  margin-top: var(--space-lg);
 }
 
 .info-list li {
@@ -790,7 +790,7 @@ button {
 
 /* CTA band */
 .cta-band {
-  padding: 5.5rem 0;
+  padding: var(--section-pad-y) 0;
   background:
     linear-gradient(135deg, rgba(242, 106, 27, 0.95), rgba(212, 85, 15, 0.92)),
     url("../assets/img/embreagem-1.jpg") center / cover;
@@ -830,7 +830,7 @@ button {
 /* Footer */
 .footer {
   background: #1a1a1a;
-  padding-top: 4rem;
+  padding-top: var(--space-2xl);
   border-top: 1px solid transparent;
   color: #fff;
 }
@@ -838,8 +838,8 @@ button {
 .footer__grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 2.5rem;
-  padding-bottom: 3rem;
+  gap: var(--section-inner-gap);
+  padding-bottom: var(--space-xl);
 }
 
 .footer__brand p {
@@ -996,6 +996,7 @@ button {
 @media (max-width: 560px) {
   .container {
     width: min(100% - 1.5rem, var(--container));
+    --container-pad: 0.75rem;
   }
 
   .hero {

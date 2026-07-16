@@ -1,5 +1,8 @@
 /* ============================================
    MAK Embreagens — Design System
+   ============================================
+   Dica: ajuste principalmente a seção
+   "Espaçamentos" abaixo para mudar distâncias.
    ============================================ */
 
 :root {
@@ -32,6 +35,35 @@
   /* Type */
   --font-display: "Barlow Condensed", sans-serif;
   --font-body: "Manrope", sans-serif;
+
+  /* ----------------------------------------
+     Espaçamentos (escala base)
+     Aumente/diminua estes valores para
+     controlar o respiro geral do site.
+     ---------------------------------------- */
+  --space-2xs: 0.35rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.85rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 5.5rem;
+  --space-4xl: 7rem;
+
+  /* ----------------------------------------
+     Atalhos de layout (os mais usados)
+     Mexa nestes se quiser afinar rápido.
+     ---------------------------------------- */
+  --section-pad-y: var(--space-3xl);      /* padding vertical das seções */
+  --section-pad-y-sm: var(--space-2xl);   /* seções um pouco menores */
+  --section-inner-gap: var(--space-xl);   /* título → conteúdo */
+  --content-gap: var(--space-lg);         /* gaps de grids/listas */
+  --stack-gap: var(--space-md);           /* espaços entre blocos pequenos */
+  --inline-gap: var(--space-sm);          /* botões, ícones, chips */
+  --container-pad: 2.5rem;                /* margem lateral da página */
+  --brands-gap: 4.75rem;                  /* distância entre logos */
+  --diff-gap: var(--space-lg);            /* espaço entre as 3 colunas */
 
   /* Layout */
   --container: 1180px;
