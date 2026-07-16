@@ -142,7 +142,7 @@
 
     const start = () => {
       stop();
-      timer = window.setInterval(next, 1800);
+      timer = window.setInterval(next, 1400);
     };
 
     const stop = () => {

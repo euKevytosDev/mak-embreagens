@@ -408,8 +408,8 @@ button {
 
 .brand-logo {
   flex: 0 0 auto;
-  width: 120px;
-  height: 70px;
+  width: 150px;
+  height: 88px;
   display: grid;
   place-items: center;
   background: transparent;
@@ -424,7 +424,7 @@ button {
 
 .brand-logo img {
   max-width: 100%;
-  max-height: 52px;
+  max-height: 68px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -464,8 +464,8 @@ button {
   }
 
   .brand-logo {
-    width: 96px;
-    height: 58px;
+    width: 120px;
+    height: 72px;
   }
 
   .brands__nav {
