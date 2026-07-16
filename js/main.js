@@ -87,4 +87,77 @@
   } else {
     counters.forEach(animateCount);
   }
+
+  /* Brands carousel — pulos laterais (estilo RS) */
+  const track = document.getElementById("brandsTrack");
+  const carousel = track && track.closest(".brands__carousel");
+  if (track && carousel) {
+    const prevBtn = carousel.querySelector(".brands__nav--prev");
+    const nextBtn = carousel.querySelector(".brands__nav--next");
+    const logos = Array.from(track.children);
+    let index = 0;
+    let timer = null;
+    let step = 1;
+
+    const visibleCount = () => {
+      const viewport = carousel.querySelector(".brands__viewport");
+      if (!viewport || !logos[0]) return 4;
+      const logoW = logos[0].getBoundingClientRect().width;
+      const styles = getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+      const unit = logoW + gap;
+      return Math.max(1, Math.floor((viewport.clientWidth + gap) / unit));
+    };
+
+    const maxIndex = () => Math.max(0, logos.length - visibleCount());
+
+    const goTo = (i, animate = true) => {
+      index = Math.max(0, Math.min(i, maxIndex()));
+      if (!animate) track.style.transition = "none";
+      const logoW = logos[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      track.style.transform = `translateX(-${index * (logoW + gap)}px)`;
+      if (!animate) {
+        track.offsetHeight;
+        track.style.transition = "";
+      }
+    };
+
+    const next = () => {
+      if (index >= maxIndex()) {
+        goTo(0, false); // volta sem arrastar todas
+        requestAnimationFrame(() => goTo(Math.min(1, maxIndex())));
+      } else {
+        goTo(index + step);
+      }
+    };
+
+    const prev = () => {
+      if (index <= 0) {
+        goTo(maxIndex(), false);
+      } else {
+        goTo(index - step);
+      }
+    };
+
+    const start = () => {
+      stop();
+      timer = window.setInterval(next, 1800);
+    };
+
+    const stop = () => {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    };
+
+    prevBtn && prevBtn.addEventListener("click", () => { prev(); start(); });
+    nextBtn && nextBtn.addEventListener("click", () => { next(); start(); });
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+    window.addEventListener("resize", () => goTo(Math.min(index, maxIndex()), false));
+
+    goTo(0, false);
+    start();
+  }
+
 })();

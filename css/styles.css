@@ -379,60 +379,101 @@ button {
 
 /* Brands */
 .brands {
-  padding: 5rem 0 3.5rem;
+  padding: 5rem 0 4rem;
   background: var(--ink);
   border-block: 1px solid var(--line);
 }
 
-.brands__track-wrap {
+.brands__carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+.brands__viewport {
   overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  margin-top: 2rem;
+  width: 100%;
 }
 
 .brands__track {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  width: max-content;
-  animation: marquee 38s linear infinite;
-  padding: 0.5rem 0;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-.brands__track-wrap:hover .brands__track {
-  animation-play-state: paused;
+  gap: 3.5rem;
+  will-change: transform;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .brand-logo {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   width: 120px;
-  height: 72px;
+  height: 70px;
   display: grid;
   place-items: center;
-  padding: 0.65rem 0.9rem;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  opacity: 0.92;
+  background: transparent;
+  opacity: 0.78;
   transition: opacity 0.25s, transform 0.25s;
 }
 
 .brand-logo:hover {
   opacity: 1;
-  transform: translateY(-2px);
+  transform: scale(1.06);
 }
 
 .brand-logo img {
   max-width: 100%;
-  max-height: 48px;
+  max-height: 52px;
   width: auto;
   height: auto;
   object-fit: contain;
+  /* só o formato da logo, sem fundo */
+  filter: brightness(0) invert(1);
+}
+
+.brands__nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.brands__nav svg {
+  width: 22px;
+  height: 22px;
+}
+
+.brands__nav:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+}
+
+@media (max-width: 700px) {
+  .brands__carousel {
+    gap: 0.35rem;
+  }
+
+  .brands__track {
+    gap: 2.25rem;
+  }
+
+  .brand-logo {
+    width: 96px;
+    height: 58px;
+  }
+
+  .brands__nav {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 /* Diferenciais — layout igual RS (3 colunas, imagens alinhadas) */
