@@ -413,7 +413,7 @@ button {
   display: grid;
   place-items: center;
   background: transparent;
-  opacity: 0.78;
+  opacity: 0.92;
   transition: opacity 0.25s, transform 0.25s;
 }
 
@@ -428,8 +428,6 @@ button {
   width: auto;
   height: auto;
   object-fit: contain;
-  /* só o formato da logo, sem fundo */
-  filter: brightness(0) invert(1);
 }
 
 .brands__nav {
