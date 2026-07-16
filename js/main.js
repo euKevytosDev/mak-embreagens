@@ -160,4 +160,16 @@
     start();
   }
 
+
+  /* Hero slideshow — fade suave entre fotos */
+  const heroSlides = document.querySelectorAll("#heroSlides .hero__slide");
+  if (heroSlides.length > 1) {
+    let heroIndex = 0;
+    window.setInterval(() => {
+      heroSlides[heroIndex].classList.remove("is-active");
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      heroSlides[heroIndex].classList.add("is-active");
+    }, 5200);
+  }
+
 })();
