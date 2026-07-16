@@ -295,7 +295,7 @@ button {
   object-position: center 40%;
   opacity: 0;
   transform: scale(1.04);
-  transition: opacity 1.4s ease-in-out, transform 7s ease-out;
+  transition: opacity 2.4s ease-in-out, transform 9s ease-out;
   will-change: opacity, transform;
 }
 
@@ -309,8 +309,11 @@ button {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(105deg, rgba(8, 8, 8, 0.92) 0%, rgba(8, 8, 8, 0.78) 42%, rgba(8, 8, 8, 0.35) 100%),
-    linear-gradient(to top, rgba(8, 8, 8, 0.75) 0%, transparent 45%);
+    /* véu fixo leve em toda a imagem */
+    rgba(8, 8, 8, 0.42),
+    /* reforço no lado do texto */
+    linear-gradient(105deg, rgba(8, 8, 8, 0.78) 0%, rgba(8, 8, 8, 0.45) 48%, rgba(8, 8, 8, 0.22) 100%),
+    linear-gradient(to top, rgba(8, 8, 8, 0.55) 0%, transparent 50%);
 }
 
 .hero__content {
