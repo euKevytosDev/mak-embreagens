@@ -12,17 +12,19 @@
 
   /* Neutrals */
   --black: #0c0c0c;
-  --ink: #141414;
-  --charcoal: #1c1c1c;
-  --slate: #2a2a2a;
-  --muted: #9a9a9a;
-  --cream: #f3eee6;
+  --ink: #1a1a1a;
+  --charcoal: #2a2a2a;
+  --slate: #4a4a4a;
+  --muted: #6b6b6b;
+  --cream: #f5f5f5;
   --white: #ffffff;
+  --line: #e6e6e6;
 
-  /* Semantic */
-  --bg: var(--black);
-  --bg-elevated: var(--charcoal);
-  --text: var(--white);
+  /* Semantic — tema claro */
+  --bg: #fafafa;
+  --bg-elevated: var(--white);
+  --bg-soft: #f0f0f0;
+  --text: #161616;
   --text-muted: var(--muted);
   --accent: var(--orange);
   --accent-2: var(--blue);
@@ -36,7 +38,7 @@
   --header-h: 84px;
   --radius: 14px;
   --radius-sm: 10px;
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
