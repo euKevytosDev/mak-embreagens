@@ -917,10 +917,29 @@ button {
   padding: 1.25rem 0;
 }
 
+.footer__bottom-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 1.25rem;
+  text-align: center;
+}
+
 .footer__bottom p {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.4);
-  text-align: center;
+  margin: 0;
+}
+
+.footer__credito a {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer__credito a:hover {
+  color: var(--accent);
 }
 
 /* WhatsApp float */
