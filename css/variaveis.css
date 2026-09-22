@@ -1,8 +1,7 @@
 /* ============================================
-   MAK Embreagens — Design System
+   MAK Embreagens — Design System (mobile-first)
    ============================================
-   Dica: ajuste principalmente a seção
-   "Espaçamentos" abaixo para mudar distâncias.
+   Base = celular. Escala sobe em tablet/desktop.
    ============================================ */
 
 :root {
@@ -23,7 +22,7 @@
   --white: #ffffff;
   --line: rgba(255, 255, 255, 0.1);
 
-  /* Semantic — tema escuro profissional */
+  /* Semantic */
   --bg: var(--black);
   --bg-elevated: var(--charcoal);
   --bg-soft: #222;
@@ -36,43 +35,71 @@
   --font-display: "Barlow Condensed", sans-serif;
   --font-body: "Manrope", sans-serif;
 
-  /* ----------------------------------------
-     Espaçamentos (escala base)
-     Aumente/diminua estes valores para
-     controlar o respiro geral do site.
-     ---------------------------------------- */
-  --space-2xs: 0.35rem;
-  --space-xs: 0.5rem;
-  --space-sm: 0.85rem;
-  --space-md: 1.25rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4rem;
-  --space-3xl: 5.5rem;
-  --space-4xl: 7rem;
+  /* Escala mobile (base) */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.4rem;
+  --space-sm: 0.65rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.75rem;
+  --space-3xl: 3.5rem;
+  --space-4xl: 4.5rem;
 
-  /* ----------------------------------------
-     Atalhos de layout (os mais usados)
-     Mexa nestes se quiser afinar rápido.
-     ---------------------------------------- */
-  --section-pad-y: var(--space-3xl);      /* padding vertical das seções */
-  --section-pad-y-sm: var(--space-2xl);   /* seções um pouco menores */
-  --section-inner-gap: var(--space-xl);   /* título → conteúdo */
-  --content-gap: var(--space-lg);         /* gaps de grids/listas */
-  --stack-gap: var(--space-md);           /* espaços entre blocos pequenos */
-  --inline-gap: var(--space-sm);          /* botões, ícones, chips */
-  --container-pad: 2.5rem;                /* margem lateral da página */
-  --brands-gap: 4.75rem;                  /* distância entre logos */
-  --diff-gap: var(--space-lg);            /* espaço entre as 3 colunas */
+  --section-pad-y: 3.25rem;
+  --section-pad-y-sm: 2.5rem;
+  --section-inner-gap: 1.35rem;
+  --content-gap: 1.15rem;
+  --stack-gap: 0.85rem;
+  --inline-gap: 0.65rem;
+  --container-pad: 1.15rem;
+  --brands-gap: 2.5rem;
+  --diff-gap: 1.35rem;
 
   /* Layout */
   --container: 1180px;
-  --header-h: 84px;
-  --radius: 14px;
-  --radius-sm: 10px;
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --header-h: 64px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur: 0.55s;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-sm: 0.85rem;
+    --space-md: 1.25rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 5rem;
+    --space-4xl: 6.5rem;
+
+    --section-pad-y: 4.5rem;
+    --section-pad-y-sm: 3.25rem;
+    --section-inner-gap: 2.25rem;
+    --content-gap: 1.5rem;
+    --stack-gap: 1.15rem;
+    --inline-gap: 0.85rem;
+    --container-pad: 2rem;
+    --brands-gap: 3.75rem;
+    --diff-gap: 1.75rem;
+    --header-h: 76px;
+    --radius: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-pad-y: 5.5rem;
+    --section-pad-y-sm: 4rem;
+    --section-inner-gap: 3rem;
+    --container-pad: 2.5rem;
+    --brands-gap: 4.75rem;
+    --diff-gap: 2rem;
+    --header-h: 84px;
+  }
 }
